@@ -1,0 +1,25 @@
+{
+  "id": "pf1-sorted-skills",
+  "title": "Pathfinder 1e Sorted Skills",
+  "description": "Sorts skills alphabetically on the character sheet and allows for custom skills.",
+  "authors": [{"name":"CHUNGUS"}],
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11.307"
+  },
+  "scripts": [
+    "scripts/sheet-modifications.js"
+  ],
+  "styles": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "esmodules": [],
+  "packs": [],
+  "dependencies": []
+}
