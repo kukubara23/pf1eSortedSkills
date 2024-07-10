@@ -24,7 +24,7 @@
   "dependencies": [],
 
   "manifest": "https://raw.githubusercontent.com/kukubara23/pf1eSortedSkills/main/module.json",
-	"download": "https://github.com/kukubara23/pf1eSortedSkills/blob/main/pf1-sorted-skills.zip",
+	"download": "https://github.com/kukubara23/pf1eSortedSkills/raw/main/pf1-sorted-skills.zip",
 	"url": "https://github.com/kukubara23/pf1eSortedSkills"
 
 }
