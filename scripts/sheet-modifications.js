@@ -2,11 +2,19 @@ Hooks.on('renderActorSheet', (app, html, data) => {
   if (app.actor.type !== 'character') return;
 
   const skillsList = html.find('.skills-list');
-  const skillItems = skillsList.find('li.skill').not('.sub-skill');
+  const skillItems = skillsList.find('li.skill').not('.arbitrary');
   
-  // Function to get the skill name
+  // Function to get the skill name or subskill name
   function getSkillName($skill) {
-    return $skill.find('.skill-name h4').text().trim().toLowerCase();
+    let name;
+    if ($skill.hasClass('sub-skill')) {
+      name = $skill.find('input[name$=".name"]').val().trim();
+      // Strip out parent skill name (Craft, Perform, or Profession)
+      name = name.replace(/^(Craft|Perform|Profession)\s*\(/, '').replace(/\)$/, '');
+    } else {
+      name = $skill.find('.skill-name h4').text().trim();
+    }
+    return name.toLowerCase();
   }
 
   // Sort skills
@@ -27,15 +35,14 @@ Hooks.on('renderActorSheet', (app, html, data) => {
   // Reorder skills
   sortedSkills.forEach(skill => {
     const $skill = $(skill);
-    const skillId = $skill.data('skill');
-    const subSkills = skillsList.find(`li.sub-skill[data-sub-skill="${skillId}"]`);
     skillsList.append($skill);
-    if (subSkills.length) {
-      skillsList.append(subSkills);
-    }
   });
 
-  // Move the "Add Skill" control to the bottom
+  // Move arbitrary skills (Add Skill options) to the bottom
+  const arbitrarySkills = skillsList.find('li.skill.arbitrary');
+  arbitrarySkills.appendTo(skillsList);
+
+  // Move the general "Add Skill" control to the bottom
   const addSkillControl = skillsList.find('.controls.skills');
-  skillsList.append(addSkillControl);
+  addSkillControl.appendTo(skillsList);
 });
