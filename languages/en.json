@@ -1,0 +1,10 @@
+{
+  "pf1-sorted-skills": {
+    "settings": {
+      "arbitrarySkillsAtBottom": {
+        "Name": "Place \"Add Skill\" options at bottom",
+        "Hint": "If checked, \"Add Skill\" options for Craft, Perform, and Profession will be placed at the bottom of the skills list."
+      }
+    }
+  }
+}
