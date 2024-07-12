@@ -1,9 +1,9 @@
 {
   "id": "pf1-sorted-skills",
   "title": "Pathfinder 1e Sorted Skills",
-  "description": "Sorts skills alphabetically on the character sheet and allows for custom skills.",
+  "description": "Sorts skills alphabetically based on Skill ID allows for custom skills.",
   "authors": [{"name":"CHUNGUS"}],
-  "version": "1.0.1",
+  "version": "1.1.0",
   "compatibility": {
     "minimum": "10",
     "verified": "11.307"
