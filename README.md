@@ -4,3 +4,6 @@ Puts ALL skills alphabetically including custom skills. (In example, I have some
 Known issues:
 Skills with add button are placed at bottom otherwise they would be at the top.
 Subskills are placed at the top.
+
+
+manifest: https://raw.githubusercontent.com/kukubara23/pf1eSortedSkills/main/module.json
